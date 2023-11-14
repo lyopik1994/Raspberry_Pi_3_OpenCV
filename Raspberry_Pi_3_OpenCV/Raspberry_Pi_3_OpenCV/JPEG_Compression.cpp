@@ -3,7 +3,7 @@
 
 void JPEG_Compression()
 {
-    cv::Mat img = cv::imread("D:/source/OpenCV/cat.jpg");
+    cv::Mat img = cv::imread("D:/source/OpenCV/Raspberry_Pi_3_OpenCV/cat.jpg");
 
     std::vector<int> compression_params;
     compression_params.push_back(cv::IMWRITE_JPEG_QUALITY);

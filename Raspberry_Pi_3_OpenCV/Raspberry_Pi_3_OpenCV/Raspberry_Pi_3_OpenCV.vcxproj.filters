@@ -21,9 +21,15 @@
     <ClCompile Include="JPEG_Compression.cpp">
       <Filter>Исходные файлы</Filter>
     </ClCompile>
+    <ClCompile Include="MJPEG.cpp">
+      <Filter>Исходные файлы</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="JPEG_Compression.h">
+      <Filter>Файлы заголовков</Filter>
+    </ClInclude>
+    <ClInclude Include="MJPEG.h">
       <Filter>Файлы заголовков</Filter>
     </ClInclude>
   </ItemGroup>

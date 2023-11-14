@@ -3,12 +3,16 @@
 
 #include <iostream>
 #include "JPEG_Compression.h"
+#include "MJPEG.h"
 #include <opencv2/highgui.hpp>
+#include <opencv2/videoio/videoio.hpp>
 
 int main()
 {
     
-    JPEG_Compression();
+    //JPEG_Compression();
+    MJPEG();
+
     
 }
 

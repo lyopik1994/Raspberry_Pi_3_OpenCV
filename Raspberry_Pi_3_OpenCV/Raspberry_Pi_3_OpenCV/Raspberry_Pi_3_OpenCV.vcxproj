@@ -131,10 +131,12 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="JPEG_Compression.cpp" />
+    <ClCompile Include="MJPEG.cpp" />
     <ClCompile Include="Raspberry_Pi_3_OpenCV.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="JPEG_Compression.h" />
+    <ClInclude Include="MJPEG.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
