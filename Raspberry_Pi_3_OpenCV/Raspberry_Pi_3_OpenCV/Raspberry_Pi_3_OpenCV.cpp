@@ -6,6 +6,7 @@
 #include "MJPEG.h"
 #include <opencv2/highgui.hpp>
 #include <opencv2/videoio/videoio.hpp>
+#include <chrono>
 
 int main()
 {
