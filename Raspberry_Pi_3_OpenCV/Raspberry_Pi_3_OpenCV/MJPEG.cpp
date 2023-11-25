@@ -15,6 +15,8 @@ void MJPEG()
 
     double fps = inputVideo.get(cv::CAP_PROP_FPS); 
     
+    int totalFrames = inputVideo.get(cv::CAP_PROP_FRAME_COUNT);
+    
 
     cv::Size frameSize(
         (int)inputVideo.get(cv::CAP_PROP_FRAME_WIDTH),
@@ -47,13 +49,24 @@ void MJPEG()
 
         outputVideo.write(encoded_frame);
     }
+
+
     auto end_codec = std::chrono::steady_clock::now();
-    std::cout << "Codec time " << std::chrono::duration_cast<std::chrono::microseconds>(end_codec - start_codec).count() << " microseconds" << "\n";
+
+
+    std::cout << "Codec time = " << std::chrono::duration_cast<std::chrono::milliseconds>(end_codec - start_codec).count() << " milliseconds" << "\n";// время конвертации в MJPG
+
 
     inputVideo.release();
     outputVideo.release();
 
+
     auto end_full = std::chrono::steady_clock::now();
 
-    std::cout << "Full time "<< std::chrono::duration_cast<std::chrono::microseconds>(end_full - start_full).count()<< " microseconds";
+    std::cout << "Full time = "<< std::chrono::duration_cast<std::chrono::seconds>(end_full - start_full).count()<< " seconds" << "\n"; // время всей программы
+    
+    auto frame_time = std::chrono::duration_cast<std::chrono::milliseconds>(end_full - start_full).count() / (totalFrames); // время обработки кадра
+
+    std::cout << "Frame time = " << frame_time << " milliseconds" << "\n";
+   
 }
